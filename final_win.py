@@ -9,7 +9,6 @@ class FinalWin(QWidget):
         super().__init__()
         self.set_appear()
         self.initUI()
-        self.connects()
         self.show()
 
     def set_appear(self):
@@ -18,7 +17,11 @@ class FinalWin(QWidget):
         self.move(win_x, win_y)
 
     def initUI(self):
-        pass
+        self.lb_index = QLabel()
+        self.lb_work = QLabel()
 
-    def connects(self):
-        pass
+        self.vline = QVBoxLayout()
+        self.vline.addWidget(self.lb_index, alignment= Qt.AlignCenter)
+        self.vline.addWidget(self.lb_work, alignment= Qt.AlignCenter)
+        self.setLayout(self.vline)
+
