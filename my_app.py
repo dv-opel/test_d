@@ -16,7 +16,7 @@ class MainWin(QWidget):
         self.setWindowTitle(txt_title)
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
-        
+
     def initUI(self):
         self.lb_hello = QLabel(txt_hello)
         self.lb_instruction = QLabel(txt_instruction)
@@ -33,7 +33,7 @@ class MainWin(QWidget):
 
     def next_window(self):
         self.hide()
-        self.sec_sin = SecWin()
+        self.sec_win = SecWin()
 
 app = QApplication([])
 mw = MainWin()
